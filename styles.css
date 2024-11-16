@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.falling-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.falling {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: fall 5s infinite ease-in-out;
+}
+
+
+.falling:nth-child(2) {
+  left: 50%; 
+  animation-delay: 2s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
